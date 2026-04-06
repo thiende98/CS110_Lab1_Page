@@ -13,7 +13,7 @@
             <hr>
         </div>
 
-        <form id ="cat-form">
+        <form id ="cat-form" >
             <p>Do you love cats?</p>
             <input type="radio" name="love" value="yes" id="yes"/>
             <label for="yes">Yes, angles in desguise!!</label>
@@ -21,9 +21,9 @@
             <input type="radio" name="love" value="no" id="no"/>
             <label for="no">No, those are all devils.</label>
             <p> Tell me why? ... </p>
-            <input id = "question" placeholder="Ain't nothing but a mistake..." type="text" required />
+            <input id = "question" type="text" required placeholder="Ain't nothing but a mistake..."/>
             <p></p>
-            <input id = "submitButton" type="submit" value="Submit Response" />
+            <input id = "submitButton" type="submit"/>
         </form>
         
         
@@ -50,15 +50,19 @@
 
         <script>
             document.getElementById("submitButton").addEventListener("click", function(e) {
-            e.preventDefault();
+                if(!question.reportValidity())
+                {
+                    e.preventDefault();
+                    return;
+                }
+                e.preventDefault();
+                const p = document.createElement("p");
+                p.textContent = "I DON'T CARE! Why? Cause'... I want it that way!";
+                p.style.color = "red";
+                p.style.fontWeight = "bold";
+                p.style.fontSize = "24px";
 
-            const p = document.createElement("p");
-            p.textContent = "I DON'T CARE! You know? Cause'... I want it that way!";
-            p.style.color = "red";
-            p.style.fontWeight = "bold";
-            p.style.fontSize = "24px";
-
-            document.getElementById("content").prepend(p);
+                document.getElementById("content").prepend(p);
             });
         </script>
     </body>
