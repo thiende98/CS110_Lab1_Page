@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> Cats </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        
+        <div class = "top-heading">
+            <h1> This page is all about cat (?!?!) </h1>
+            <hr>
+        </div>
+
+        <form id ="cat-form">
+            <p>Do you love cats?</p>
+            <input type="radio" name="love" value="yes" id="yes"/>
+            <label for="yes">Yes, angles in desguise!!</label>
+            <p></p>
+            <input type="radio" name="love" value="no" id="no"/>
+            <label for="no">No, those are all devils.</label>
+            <p> Tell me why? ... </p>
+            <input id = "question" placeholder="Ain't nothing but a mistake..." type="text" required />
+            <p></p>
+            <input id = "submitButton" type="submit" value="Submit Response" />
+        </form>
+        
+        
+        <div id = "content">
+            <h2> Cat pics </h2>
+                <div class = "display-pics">
+                    <img class = "cat-img" src = "Cat1.jpg" alt = "Cat Pics 1"/>
+                    <img class = "cat-img" src = "Cat2.jpg" alt = "Cat Pics 2"/>
+                    <img class = "cat-img" src = "Cat3.jpeg" alt = "Cat Pics 3"/>
+                </div>
+
+            <hr>
+           
+            <h2> Cat videos </h2>
+                <div class = "display-pics">
+                <video controls muted>
+                    <source src = "CatVideo.mp4" type = "video/mp4"/>
+                </video>
+                </div>
+            <hr>
+        </div>
+
+        <a href = "index.html"> Back the the resume page. </a>
+
+        <script>
+            document.getElementById("submitButton").addEventListener("click", function(e) {
+            e.preventDefault();
+
+            const p = document.createElement("p");
+            p.textContent = "I DON'T CARE! You know? Cause'... I want it that way!";
+            p.style.color = "red";
+            p.style.fontWeight = "bold";
+            p.style.fontSize = "24px";
+
+            document.getElementById("content").prepend(p);
+            });
+        </script>
+    </body>
+    
+    
+</html>

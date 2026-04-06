@@ -1,0 +1,57 @@
+.top-heading {
+    text-align: center;
+    color: rgb(252, 134, 87);
+    }
+
+.top-heading img {
+    max-width: 150px;
+}
+
+.small-img {
+    max-width: 50px;
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.display-pics {
+    display: flex;
+    justify-content: center;
+    max-height: 300px;
+}
+
+.cat-img {
+    max-width: 300px;
+    max-height: 250px;
+    padding: 10px 20px 10px 10px;
+}
+
+.cat-img:hover {
+    animation: scale-up 0.3s ease-in-out;
+}
+
+body {
+    background-color: rgb(226, 245, 252);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+p {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+span {
+    padding-left: 20px;
+}
